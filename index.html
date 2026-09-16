@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suhayb Altan — Full-Stack Developer &amp; Systems Builder</title>
+<meta name="description" content="Suheib Mukhtar Nur (Suhayb Altan) — full-stack developer building management systems and SaaS platforms for legal, education, and real estate clients, plus applied ML/DL projects.">
+<link rel="icon" type="image/png" href="img/logo-mark.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#ffffff;
+    --ink:#141414;
+    --muted:#6b6b6b;
+    --line:#e8e8e6;
+    --orange:#db5d0e;
+    --dark:#111111;
+    --dark-ink:#f2ede6;
+    --maxw:800px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', -apple-system, sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.wordmark{
+    font-family:'Space Grotesk', sans-serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    margin:0;
+  }
+  a{color:inherit;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
+
+  header{
+    position:sticky; top:0; z-index:20;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:16px 0;}
+  .brand{display:flex; align-items:center; gap:10px;}
+  .brand img{width:26px; height:26px;}
+  .wordmark{font-size:1.05rem;}
+  .wordmark span{color:var(--orange);}
+  nav ul{list-style:none; display:flex; gap:28px; margin:0; padding:0;}
+  nav a{text-decoration:none; font-size:.94rem; color:var(--ink); border-bottom:1px solid transparent; padding-bottom:2px;}
+  nav a:hover{border-color:var(--orange);}
+
+  .hero{padding:72px 0 56px; border-bottom:1px solid var(--line);}
+  .hero-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:44px; align-items:center;}
+  .hero h1{font-size:clamp(2rem, 4.4vw, 3rem); line-height:1.14;}
+  .hero p{font-size:1.06rem; color:var(--muted); max-width:52ch; margin-top:20px;}
+  .stat-line{margin-top:24px; font-size:.94rem; color:var(--ink); border-left:2px solid var(--orange); padding-left:12px;}
+  .cta-row{display:flex; gap:14px; margin-top:32px; flex-wrap:wrap;}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:12px 20px; font-size:.95rem; text-decoration:none; border-radius:2px; border:1px solid var(--ink);}
+  .btn.solid{background:var(--ink); color:#fff;}
+  .btn.solid:hover{background:var(--orange); border-color:var(--orange);}
+  .btn.outline{color:var(--ink);}
+  .btn.outline:hover{border-color:var(--orange); color:var(--orange);}
+  .hero-photo{width:100%; border-radius:3px; overflow:hidden;}
+  .hero-photo img{width:100%; display:block; object-fit:cover;}
+  @media (max-width:720px){ .hero-grid{grid-template-columns:1fr;} .hero-photo{max-width:280px; margin:0 auto;} }
+
+  section{padding:60px 0; border-bottom:1px solid var(--line);}
+  .label{font-size:.85rem; color:var(--muted); margin-bottom:14px;}
+  .about-body{max-width:62ch; font-size:1.02rem;}
+  .tags{display:flex; flex-wrap:wrap; gap:10px; margin-top:26px;}
+  .tag{font-size:.86rem; padding:7px 13px; border:1px solid var(--line); border-radius:2px; color:var(--ink);}
+  .tag b{color:var(--orange); font-weight:600;}
+
+  .registry{margin-top:8px;}
+  .row{display:grid; grid-template-columns:1.1fr 2fr; gap:18px 28px; padding:26px 0; border-top:1px solid var(--line);}
+  .row:first-child{border-top:none;}
+  .row .who{font-size:.82rem; color:var(--muted);}
+  .row h3{font-size:1.15rem; margin-top:4px;}
+  .row .desc{color:var(--ink); margin-top:8px; font-size:.96rem; max-width:54ch;}
+  .row .stack{margin-top:10px; font-size:.82rem; color:var(--muted);}
+  .row .stack em{font-style:normal; color:var(--ink);}
+  .row .stack a{color:var(--orange); text-decoration:none; border-bottom:1px solid transparent;}
+  .row .stack a:hover{border-color:var(--orange);}
+  @media (max-width:640px){ .row{grid-template-columns:1fr;} }
+
+  .ml-band{background:var(--dark); color:var(--dark-ink); padding:60px 0; border-bottom:1px solid var(--line);}
+  .ml-band .label{color:#a89b8c;}
+  .ml-band h2{color:#fff; font-size:1.5rem;}
+  .ml-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:24px;}
+  .ml-card{border:1px solid rgba(242,237,230,.18); padding:20px; border-radius:2px;}
+  .ml-card h4{font-family:'Space Grotesk',sans-serif; font-size:1rem; color:var(--orange); margin:0 0 8px;}
+  .ml-card p{margin:0; font-size:.9rem; color:#cfc6ba;}
+  @media (max-width:640px){ .ml-grid{grid-template-columns:1fr;} }
+
+  .contact{padding:64px 0 80px;}
+  .contact h2{font-size:1.8rem;}
+  .contact p{color:var(--muted); margin-top:14px; max-width:48ch;}
+  .contact-links{margin-top:28px; display:flex; flex-wrap:wrap; gap:22px; font-size:.96rem;}
+  .contact-links a{text-decoration:none; border-bottom:1px solid var(--line); padding-bottom:2px;}
+  .contact-links a:hover{border-color:var(--orange); color:var(--orange);}
+  footer{padding:22px 0; font-size:.8rem; color:var(--muted);}
+
+  .wa-float{
+    position:fixed; bottom:22px; right:22px; z-index:30;
+    background:var(--ink); color:#fff; text-decoration:none;
+    display:flex; align-items:center; gap:8px;
+    padding:13px 18px; border-radius:2px; font-size:.9rem;
+    box-shadow:0 6px 18px rgba(0,0,0,.18);
+    transition:background .15s ease;
+  }
+  .wa-float:hover{background:var(--orange);}
+  .wa-float svg{width:16px; height:16px; fill:currentColor;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <img src="img/logo-mark.png" alt="Suhayb Altan mark">
+      <div class="wordmark">Suhayb <span>Altan</span></div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#ml">Research</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero wrap">
+  <div class="hero-grid">
+    <div>
+      <h1>Building the systems institutions run on.</h1>
+      <p>I'm Suheib Mukhtar Nur — a full-stack developer and graphic designer based in Mogadishu. I build management software and SaaS platforms for legal firms, schools, and real estate businesses, and apply machine learning to real-world problems back home.</p>
+      <div class="stat-line">Systems in production for legal, education, and real estate clients</div>
+      <div class="cta-row">
+        <a href="#work" class="btn solid">See the work</a>
+        <a href="https://wa.me/252611197219" class="btn outline" target="_blank" rel="noopener">Message on WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="img/headshot.jpg" alt="Suheib Mukhtar Nur">
+    </div>
+  </div>
+</section>
+
+<section id="about" class="wrap">
+  <div class="label">About</div>
+  <div class="about-body">
+    <p>I run <strong>Heyllan</strong>,a rent and building management platform — it tracks rent, tenants, and maintenance online, all in one place. Estate Link runs on it today, handling relocation and rent management for landlords and tenants in Mogadishu, from payments and receipts to maintenance requests and lease renewals. Instead of managing a building's records across scattered notes and phone calls, Heyllan keeps everything organized and accessible for both sides, from move-in to renewal.</p></div>
+  <div class="tags">
+    <span class="tag"><b>Full-stack</b> — PHP, MySQL, HTML/CSS, JavaScript, jQuery, AJAX</span>
+    <span class="tag"><b>Design</b> — Illustrator, Photoshop</span>
+    <span class="tag"><b>Applied ML/DL</b> — Python</span>
+  </div>
+</section>
+
+<section id="work" class="wrap">
+  <div class="label">Work</div>
+  <div class="registry">
+    <div class="row">
+      <div class="who">Platform</div>
+      <div>
+        <h3>Heyllan</h3>
+        <div class="desc">The management-software platform behind my client builds — mobile app and website, one shared API, a dedicated portal per client, sold per build on a monthly or 6-month plan.</div>
+        <div class="stack"><a href="https://heyllan.com" target="_blank" rel="noopener">heyllan.com</a></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="who">Real estate</div>
+      <div>
+        <h3>Estate Link <span style="color:var(--muted); font-weight:400;">/ MogView</span></h3>
+        <div class="desc">Relocation and rent management for tenants and landlords — move coordination, rent collection, and landlord/tenant support, all running on the Heyllan platform.</div>
+        <div class="stack"><em>PHP</em> · <em>MySQL</em> · <a href="https://estatelink.estate" target="_blank" rel="noopener">estatelink.estate</a></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="who">Legal — Prime Legal</div>
+      <div>
+        <h3>LexPoint Advanced System</h3>
+        <div class="desc">Built for a legal firm to manage day-to-day casework, staffing, and equipment — one system covering both the firm's active work and its internal HR needs.</div>
+        <div class="stack"><em>PHP</em> · <em>MySQL</em> · role-based access</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="who">Education</div>
+      <div>
+        <h3>Hischool System</h3>
+        <div class="desc">A school management system built around nine distinct user roles, so administrators, teachers, students, and staff each work from the view built for them.</div>
+        <div class="stack"><em>PHP</em> · <em>MySQL</em> · 9 user roles</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ml" class="ml-band">
+  <div class="wrap">
+    <div class="label">Research &amp; applied ML</div>
+    <h2>Machine learning projects </h2>
+    <div class="ml-grid">
+      <div class="ml-card">
+        <h4>Opacity Prediction</h4>
+        <p>A machine learning model for predicting opacity, built as one of three graduation-level ML/DL projects.</p>
+      </div>
+      <div class="ml-card">
+        <h4>Signature Verification</h4>
+        <p>A Siamese neural network (VGG16-based, contrastive loss) that verifies handwritten signatures offline.</p>
+      </div>
+      <div class="ml-card">
+        <h4>Helmet Detection</h4>
+        <p>A deep learning model that detects helmet use on Somali building and construction sites, aimed at improving on-site safety compliance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact wrap" style="border-bottom:none;">
+  <div class="label">Contact</div>
+  <h2>Let's build something.</h2>
+  <p>Open to new client work — legal, education, real estate, or anything that needs a system built around how you actually work.</p>
+  <div class="contact-links">
+    <a href="https://wa.me/252611197219" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="tel:+252611197219">+252 611 197 219</a>
+    <a href="https://facebook.com/suhaybaltan" target="_blank" rel="noopener">Facebook — @suhaybaltan</a>
+    <a href="https://tiktok.com/@suhaybaltan" target="_blank" rel="noopener">TikTok — @suhaybaltan</a>
+    <a href="https://heyllan.com" target="_blank" rel="noopener">heyllan.com</a>
+  </div>
+</section>
+
+<footer class="wrap">
+  <div>&copy; <span id="year"></span> Suheib Mukhtar Nur (Suhayb Altan). Built and maintained by Heyllan.</div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/252611197219" target="_blank" rel="noopener" aria-label="Message on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.02 2C6.5 2 2 6.48 2 12c0 1.85.5 3.58 1.35 5.08L2 22l5.05-1.32A9.94 9.94 0 0012.02 22C17.5 22 22 17.52 22 12S17.5 2 12.02 2zm5.85 14.13c-.25.7-1.45 1.33-2 1.42-.53.09-1.16.13-1.87-.12-.43-.15-.98-.32-1.68-.63-2.96-1.28-4.9-4.24-5.05-4.44-.15-.2-1.2-1.6-1.2-3.05 0-1.45.76-2.16 1.03-2.46.27-.3.6-.37.8-.37.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.07.92 2.22.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.02 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.27.1 1.73.82 2.03.97.3.15.5.22.57.35.07.13.07.75-.18 1.45z"/></svg>
+  WhatsApp
+</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
